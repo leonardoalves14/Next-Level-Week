@@ -10,4 +10,4 @@ const connection = knex({
 
 export default connection;
 
-// Migrations = histórico do banco de dados
+// Migrations = histórico do banco de dados, tudo que foi feito.
