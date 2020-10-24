@@ -1,13 +1,16 @@
 import Knex from 'knex';
 
-export async function up(knex: Knex)
-{
+export async function up(knex: Knex) {
     //CRIAR A TABELA
 
-    knex.schema.createTable
+    return knex.schema.createTable('items', table => {
+        table.increments('id').primary();
+        table.string('image').notNullable();
+        table.string('title').notNullable();
+    })
 }
 
-export async function down()
-{
-    //voltar atras (deletar a tabela)
+export async function down(knex: Knex) {
+    // VOLTA ATRÁS (DELETAR A TABELA)
+    return knex.schema.dropTable('items');
 }
