@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+//JSX: Sintaxe de XML dentro do JavaScript
+import Routes from './routes';
+
 function App() {
+  /* const [counter, setCounter] = useState(0)*/ //[valor do estado, função para atualizar o valor do estado]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       <h1>Hello World! mundo bão soooo!</h1>
-      </header>
+    <div>
+      <Routes />
     </div>
   );
 }
